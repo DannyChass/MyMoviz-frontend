@@ -13,7 +13,7 @@ function Home() {
   useEffect(() => {
     async function fetchMovies() {
       try {
-        const response = await fetch('https://whatyearisit-backend-five-tau.vercel.app/movies');
+        const response = await fetch('https://my-moviz-backend-jade.vercel.app/');
         const data = await response.json();
 
         const formattedMovies = data.movies.map(movie => {
