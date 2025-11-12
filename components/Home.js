@@ -16,7 +16,7 @@ function Home() {
         const response = await fetch('http://localhost:3000/movies');
         const data = await response.json();
 
-        const formattedMovies = data.map(movie => {
+        const formattedMovies = data.movies.map(movie => {
           let shortOverview = movie.overview || 'Aucune description disponible.';
           if (shortOverview.length > 250) {
             shortOverview = shortOverview.slice(0, 250).trim() + '...';
